@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Live Web Designer Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Live Web Designer Studio</h1>
+    <div class="controls">
+      <button id="run">Run Code</button>
+      <button id="download">Download Code</button>
+    </div>
+  </header>
+  <main>
+    <aside class="sidebar">
+      <button class="tab active" data-target="editor">Editor</button>
+      <button class="tab" data-target="educational">Educational</button>
+      <button class="tab" data-target="settings">Settings</button>
+    </aside>
+    <section class="content">
+      <div id="editor" class="panel active">
+        <div class="editor-tabs">
+          <button class="subtab active" data-target="html">HTML</button>
+          <button class="subtab" data-target="css">CSS</button>
+          <button class="subtab" data-target="js">JS</button>
+        </div>
+        <div class="code-area">
+          <textarea id="html" class="code active" placeholder="Write HTML..."></textarea>
+          <textarea id="css" class="code" placeholder="Write CSS..."></textarea>
+          <textarea id="js" class="code" placeholder="Write JS..."></textarea>
+        </div>
+        <iframe id="preview"></iframe>
+      </div>
+      <div id="educational" class="panel">
+        <h2>Learn to Code</h2>
+        <div class="lesson">
+          <h3>HTML Basics</h3>
+          <p>HTML structures your webpage. Example:</p>
+          <pre>&lt;h1&gt;Hello, world!&lt;/h1&gt;</pre>
+        </div>
+        <div class="lesson">
+          <h3>CSS Basics</h3>
+          <p>CSS styles your page. Example:</p>
+          <pre>body { background: #000; color: #fff; }</pre>
+        </div>
+        <div class="lesson">
+          <h3>JavaScript Basics</h3>
+          <p>JavaScript adds interactivity. Example:</p>
+          <pre>console.log("Hello, world!");</pre>
+        </div>
+        <div class="lesson">
+          <h3>Live Preview</h3>
+          <p>Your code updates instantly as you type.</p>
+        </div>
+      </div>
+      <div id="settings" class="panel">
+        <h2>Settings</h2>
+        <div class="setting">
+          <label>Theme Color:</label>
+          <input type="color" id="themeColor" value="#ffffff">
+        </div>
+        <div class="setting">
+          <label>Font Size:</label>
+          <input type="number" id="fontSize" value="14" min="10" max="30"> px
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
